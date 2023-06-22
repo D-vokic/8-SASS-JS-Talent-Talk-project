@@ -1,0 +1,27 @@
+.about {
+  @include flex(flex-start, center, wrap, 2rem);
+
+  @media screen and (max-width: 992px) {
+    justify-content: center;
+  }
+
+  article {
+    flex-basis: 45%;
+
+    @media screen and (max-width: 992px) {
+      flex-basis: 80%;
+    }
+
+    @media screen and (max-width: 576px) {
+      flex-basis: 100%;
+    }
+
+    button {
+      @include btn($secondaryColor, white, capitalize, #333);
+
+      @media screen and (max-width: 576px) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

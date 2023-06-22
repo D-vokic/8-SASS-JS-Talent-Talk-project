@@ -1,0 +1,33 @@
+.top-navbar {
+  padding: 1rem 0;
+  background-color: $secondaryColor;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
+  &-wrapper {
+    @include flex(space-around, center, row nowrap, $gap: 0px);
+
+    .top-navbar-item {
+      color: white;
+      font-size: 0.8rem;
+
+      a {
+        color: white;
+
+        &:hover {
+          color: black;
+        }
+
+        i {
+          margin-right: 0.2rem;
+
+          &:first-child {
+            margin-left: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+}

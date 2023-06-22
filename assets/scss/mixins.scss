@@ -1,0 +1,112 @@
+@mixin flex(
+  $justify: center,
+  $align: center,
+  $flow: row wrap,
+  $gap: 0px,
+  $basis: auto
+) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-flow: $flow;
+  flex-basis: $basis;
+  gap: $gap;
+
+  @if ($flow == wrap) {
+    & > * {
+      flex-basis: $basis;
+    }
+  }
+}
+
+@mixin grid($numColumns: 3, $value: 1fr, $gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($numColumns, $value);
+  gap: $gap;
+}
+
+@mixin btn(
+  $bg: $secondaryColor,
+  $color: white,
+  $transform: capitalize,
+  $bgHover: $primaryColor,
+  $colorHover: #fff
+) {
+  background-color: $bg;
+  color: $color;
+  text-transform: $transform;
+  font-size: 0.9rem;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  margin-top: 1.5rem;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $bgHover;
+    color: $colorHover;
+  }
+}
+
+@mixin positioning(
+  $position: absolute,
+  $top: 0,
+  $right: 0,
+  $bottom: 0,
+  $left: 0,
+  $width: auto,
+  $height: auto
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  width: $width;
+  height: $height;
+
+  @if $top ==50% and $left ==50% {
+    transform: translate(-50%, -50%);
+  } @else if $top ==50% {
+    transform: translateY(-50%);
+  } @else if $left ==50% {
+    transform: translateX(-50%);
+  }
+}
+
+@mixin icons(
+  $bgColor,
+  $color,
+  $unit,
+  $iconBorderRadius,
+  $iconTextAlign: center
+) {
+  background-color: $bgColor;
+  color: $color;
+  width: $unit;
+  height: $unit;
+  line-height: $unit;
+  border-radius: $iconBorderRadius;
+  text-align: $iconTextAlign;
+}
+
+@mixin text(
+  $Fsize,
+  $Fcolor,
+  $Fmargin,
+  $Fweight,
+  $Align,
+  $Ftransform,
+  $FsizeHover
+) {
+  font-size: $Fsize;
+  color: $Fcolor;
+  margin: $Fmargin;
+  font-weight: $Fweight;
+  text-align: $Falign;
+  text-transform: $Ftransform;
+
+  @media screen and (max-width: 576px) {
+    font-size: $FsizeHover;
+  }
+}

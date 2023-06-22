@@ -1,0 +1,74 @@
+.services {
+  background-color: $primaryColor;
+  padding-bottom: 0;
+
+  h3 {
+    color: white;
+    margin-bottom: 2rem;
+  }
+
+  &-wrapper {
+    @include flex(space-between, stretch, wrap, 0px, 23%);
+
+    article {
+      text-align: center;
+      padding: 1.5rem;
+      position: relative;
+
+      @media screen and (max-width: 1200px) {
+        flex-basis: 45%;
+        gap: 5rem;
+      }
+
+      @media (max-width: 768px) {
+        flex-basis: 100%;
+        gap: 5rem;
+      }
+
+      &:hover {
+        background-color: $secondaryColor;
+        cursor: pointer;
+      }
+
+      &:hover button {
+        opacity: 1;
+      }
+
+      &.active {
+        background-color: $secondaryColor;
+
+        button{
+          opacity: 1;
+        }
+      }
+
+      img {
+        width: 80px;
+      }
+
+      h4 {
+        color: white;
+        font-size: 1.4rem;
+        margin: 1rem 0;
+      }
+
+      p {
+        color: white;
+        margin-bottom: 4rem;
+      }
+
+      button {
+        @include btn($primaryColor, white, capitalize, #333);
+        @include positioning(absolute, auto, auto, -0.8rem, 50%);
+        padding: 0.8rem 1.5rem;
+        opacity: 0;
+
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+

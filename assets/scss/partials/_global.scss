@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.7s ease-in;
+  text-decoration: none;
+  list-style-type: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: normal;
+}
+.container {
+  width: 70%;
+  margin: auto;
+
+  @media screen and (max-width: 576px) {
+    width: 80%;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h6,
+h6 {
+  text-transform: capitalize;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+section {
+  padding: 70px 0;
+}
+input,
+textarea {
+  outline: none;
+}
+.section-title {
+  font-size: 2.5rem;
+  color: #192955;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 1.5rem;
+  }
+}
+
+.map {
+  padding: 0;
+  width: 100%;
+}

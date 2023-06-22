@@ -1,0 +1,22 @@
+/*----------------------------------------
+EXTERNAL FILES
+----------------------------------------*/
+@import 'variables';
+@import 'mixins';
+@import 'animations';
+
+
+
+/*----------------------------------------
+PARTIALS
+----------------------------------------*/
+@import 'partials/global';
+@import 'partials/topnavbar';
+@import 'partials/header';
+@import 'partials/about';
+@import 'partials/services';
+@import 'partials/portfolio';
+@import 'partials/contact';
+@import 'partials/footer';
+@import 'partials/scrollToTop';
+@import 'partials/map';
